@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSCICC | Govt. Science College Islamic Cultural Club</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Noto+Serif+Bengali:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', 'Noto Serif Bengali', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #0a3d2e 0%, #1f6f54 50%, #2d8a68 100%);
+    }
+    
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    
+    .section-divider {
+      height: 4px;
+      width: 80px;
+      background: linear-gradient(90deg, #ffd700, #ffed4e);
+      margin: 0 auto 40px;
+      border-radius: 2px;
+    }
+    
+    .islamic-pattern {
+      background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.03) 35px, rgba(255,255,255,.03) 70px);
+    }
+    
+    .activity-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      background: linear-gradient(135deg, #ffd700, #ffed4e);
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+    }
+    
+    nav {
+      backdrop-filter: blur(10px);
+      background: rgba(11, 46, 34, 0.95);
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    
+    .committee-card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    
+    .committee-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+    
+    .committee-avatar {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0a3d2e, #1f6f54);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      color: #ffd700;
+      font-weight: 700;
+      border: 4px solid #ffd700;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+    }
+    
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #ffd700;
+    }
+    
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full smooth-scroll">
+  <div class="w-full h-full overflow-auto"><!-- Navigation -->
+   <nav class="sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+     <div class="flex flex-wrap justify-center items-center gap-4"><a href="#home" class="text-yellow-400 hover:text-white transition-colors duration-300 font-medium text-sm px-3 py-1">Home</a> <a href="#about" class="text-yellow-400 hover:text-white transition-colors duration-300 font-medium text-sm px-3 py-1">About</a> <a href="#activities" class="text-yellow-400 hover:text-white transition-colors duration-300 font-medium text-sm px-3 py-1">Activities</a> <a href="#committee" class="text-yellow-400 hover:text-white transition-colors duration-300 font-medium text-sm px-3 py-1">Committee</a> <a href="#gallery" class="text-yellow-400 hover:text-white transition-colors duration-300 font-medium text-sm px-3 py-1">Gallery</a> <a href="#constitution" class="text-yellow-400 hover:text-white transition-colors duration-300 font-medium text-sm px-3 py-1">Constitution</a> <a href="#contact" class="text-yellow-400 hover:text-white transition-colors duration-300 font-medium text-sm px-3 py-1">Contact</a>
+     </div>
+    </div>
+   </nav><!-- Header -->
+   <header id="home" class="gradient-bg islamic-pattern py-20 text-center text-white">
+    <div class="max-w-4xl mx-auto px-6 animate-fade-in">
+     <div class="mb-8">
+      <div class="w-40 h-40 mx-auto rounded-full bg-white p-2 shadow-2xl">
+       <img src="logo.png" alt="GSCICC Logo" class="w-full h-full rounded-full"><circle cx="100" cy="100" r="95" fill="#0a3d2e" /> <path d="M100 30 L110 70 L150 70 L118 95 L130 135 L100 110 L70 135 L82 95 L50 70 L90 70 Z" fill="#ffd700" /> <circle cx="100" cy="100" r="25" fill="none" stroke="#ffd700" stroke-width="3" /> <text x="100" y="108" text-anchor="middle" fill="#ffd700" font-size="18" font-weight="bold" font-family="Arial">
+         GSCICC
+        </text>
+       </svg>
+      </div>
+     </div>
+     <h1 id="club-name" class="text-4xl md:text-5xl font-bold mb-4 text-yellow-400">Govt. Science College Islamic Cultural Club</h1>
+     <p id="club-tagline" class="text-lg md:text-xl mb-6 opacity-90">সরকারি বিজ্ঞান কলেজের একটি আদর্শভিত্তিক ইসলামিক ছাত্র সংগঠন</p>
+     <div id="motto" class="text-xl md:text-2xl italic font-semibold text-yellow-300">
+      Knowledge · Faith · Culture
+     </div>
+    </div>
+   </header><!-- About Section -->
+   <section id="about" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+     <h2 id="about-title" class="text-4xl font-bold text-center text-gray-800 mb-4">About GSCICC</h2>
+     <div class="section-divider"></div>
+     <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
+      <p id="about-description" class="text-center"><strong class="text-green-800">Govt. Science College Islamic Cultural Club (GSCICC)</strong> একটি বহুমুখী ইসলামিক ছাত্র সংগঠন। আমাদের লক্ষ্য হলো শিক্ষার্থীদের মাঝে দ্বীনি চেতনা, নৈতিকতা ও নেতৃত্বের গুণাবলি গড়ে তোলা।</p>
+      <p class="text-center">Through Islamic education, da'wah, and cultural activities, we aim to build responsible Muslims and conscious citizens.</p>
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+       <div class="card bg-green-50 rounded-xl p-6 text-center">
+        <div class="text-4xl mb-3">
+         📚
+        </div>
+        <h3 class="font-bold text-xl text-green-800 mb-2">Education</h3>
+        <p class="text-gray-600 text-sm">Islamic knowledge and academic excellence</p>
+       </div>
+       <div class="card bg-yellow-50 rounded-xl p-6 text-center">
+        <div class="text-4xl mb-3">
+         🤲
+        </div>
+        <h3 class="font-bold text-xl text-green-800 mb-2">Da'wah</h3>
+        <p class="text-gray-600 text-sm">Spreading the message of Islam with wisdom</p>
+       </div>
+       <div class="card bg-blue-50 rounded-xl p-6 text-center">
+        <div class="text-4xl mb-3">
+         🌟
+        </div>
+        <h3 class="font-bold text-xl text-green-800 mb-2">Character</h3>
+        <p class="text-gray-600 text-sm">Building moral and ethical leadership</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Activities Section -->
+   <section id="activities" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+     <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Our Activities</h2>
+     <div class="section-divider"></div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="card bg-white rounded-xl p-6 text-center">
+       <div class="activity-icon">
+        📖
+       </div>
+       <h3 class="font-bold text-lg text-gray-800 mb-2">Quran Study Circle</h3>
+       <p class="text-gray-600 text-sm">Weekly Tafsir and recitation sessions</p>
+      </div>
+      <div class="card bg-white rounded-xl p-6 text-center">
+       <div class="activity-icon">
+        🎤
+       </div>
+       <h3 class="font-bold text-lg text-gray-800 mb-2">Islamic Lectures</h3>
+       <p class="text-gray-600 text-sm">Guest speakers and knowledge sessions</p>
+      </div>
+      <div class="card bg-white rounded-xl p-6 text-center">
+       <div class="activity-icon">
+        🤝
+       </div>
+       <h3 class="font-bold text-lg text-gray-800 mb-2">Social Welfare</h3>
+       <p class="text-gray-600 text-sm">Community service and charity programs</p>
+      </div>
+      <div class="card bg-white rounded-xl p-6 text-center">
+       <div class="activity-icon">
+        🎨
+       </div>
+       <h3 class="font-bold text-lg text-gray-800 mb-2">Cultural Events</h3>
+       <p class="text-gray-600 text-sm">Islamic art, nasheed, and competitions</p>
+      </div>
+      <div class="card bg-white rounded-xl p-6 text-center">
+       <div class="activity-icon">
+        💬
+       </div>
+       <h3 class="font-bold text-lg text-gray-800 mb-2">Discussion Forums</h3>
+       <p class="text-gray-600 text-sm">Contemporary Islamic issues and debates</p>
+      </div>
+      <div class="card bg-white rounded-xl p-6 text-center">
+       <div class="activity-icon">
+        📱
+       </div>
+       <h3 class="font-bold text-lg text-gray-800 mb-2">Digital Da'wah</h3>
+       <p class="text-gray-600 text-sm">Social media campaigns and content</p>
+      </div>
+      <div class="card bg-white rounded-xl p-6 text-center">
+       <div class="activity-icon">
+        🏆
+       </div>
+       <h3 class="font-bold text-lg text-gray-800 mb-2">Competitions</h3>
+       <p class="text-gray-600 text-sm">Quiz, debate, and essay contests</p>
+      </div>
+      <div class="card bg-white rounded-xl p-6 text-center">
+       <div class="activity-icon">
+        🌙
+       </div>
+       <h3 class="font-bold text-lg text-gray-800 mb-2">Ramadan Programs</h3>
+       <p class="text-gray-600 text-sm">Iftar, Tarawih, and spiritual gatherings</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Committee Section -->
+   <section id="committee" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+     <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Executive Committee</h2>
+     <div class="section-divider"></div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="committee-card">
+       <img src="president.jpg" class="committee-avatar object-cover">
+       <h3 class="font-bold text-xl text-gray-800 mb-1">President</h3>
+       <p class="text-green-700 font-medium text-sm mb-2">Md Samin Ismail Rupom</p>
+       <p class="text-gray-600 text-xs">Leading the club with vision and dedication</p>
+      </div>
+      <div class="committee-card">
+       <img src="vice president.jpg" class="committee-avatar object-cover">
+       <h3 class="font-bold text-xl text-gray-800 mb-1">Vice President</h3>
+       <p class="text-green-700 font-medium text-sm mb-2">Yeasin Arafat Siam</p>
+       <p class="text-gray-600 text-xs">Supporting operations and programs</p>
+      </div>
+      <div class="committee-card">
+       <img src="general secretary.jpg" class="committee-avatar object-cover">
+       <h3 class="font-bold text-xl text-gray-800 mb-1">General Secretary</h3>
+       <p class="text-green-700 font-medium text-sm mb-2">Mohamed Shamaun</p>
+       <p class="text-gray-600 text-xs">Managing administration and coordination</p>
+      </div>
+      <div class="committee-card">
+       <img src="treasure jpg" class="committee-avatar object-cover">
+       <h3 class="font-bold text-xl text-gray-800 mb-1">Treasurer</h3>
+       <p class="text-green-700 font-medium text-sm mb-2">Name Here</p>
+       <p class="text-gray-600 text-xs">Overseeing financial matters</p>
+      </div>
+      <div class="committee-card">
+       <img src="da'wah secretary.jpg" class="committee-avatar object-cover">
+       <h3 class="font-bold text-xl text-gray-800 mb-1">Da'wah Secretary</h3>
+       <p class="text-green-700 font-medium text-sm mb-2">Name Here</p>
+       <p class="text-gray-600 text-xs">Coordinating Islamic outreach activities</p>
+      </div>
+      <div class="committee-card">
+       <img src="cultural secretary.jpg" class="committee-avatar object-cover">
+       <h3 class="font-bold text-xl text-gray-800 mb-1">Cultural Secretary</h3>
+       <p class="text-green-700 font-medium text-sm mb-2">Name Here</p>
+       <p class="text-gray-600 text-xs">Organizing cultural events and programs</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Gallery Section -->
+   <section id="gallery" class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6">
+     <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Photo Gallery</h2>
+     <div class="section-divider"></div>
+     <div class="grid md:grid-cols-3 gap-6">
+      <div class="gallery-item shadow-md">
+    <img src="images/photo1.jpg">
+    
+</div>
+      <div class="gallery-item shadow-md">
+    <img src="images/photo2.jpg">
+    
+</div>
+      <div class="gallery-item shadow-md">
+  <img src="images/photo3.jpg">
+
+</div>
+      <div class="gallery-item shadow-md">
+  <img src="images/photo4.jpg">
+    
+</div>
+      <div class="gallery-item shadow-md">
+  <img src="images/photo5.jpg">
+   
+</div>
+      <div class="gallery-item shadow-md">
+  <img src="images/photo6.jpg">
+   
+  
+</div>
+     </div>
+     <p class="text-center text-gray-600 mt-8 text-sm italic">Photo gallery coming soon. Stay tuned for updates from our events!</p>
+    </div>
+   </section><!-- Constitution Section -->
+   <section id="constitution" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+     <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Our Constitution</h2>
+     <div class="section-divider"></div>
+     <div class="bg-green-50 rounded-xl p-8 shadow-md">
+      <h3 class="text-2xl font-bold text-green-800 mb-4">Core Principles</h3>
+      <div class="space-y-4">
+
+  <div class="flex items-start gap-3">
+    <span class="text-yellow-600 text-xl">✦</span>
+    <p class="text-gray-700">
+      <strong>নাম:</strong> সংগঠনের নাম হবে “Govt. Science College Islamic Cultural Club (GSCICC)”
+    </p>
+  </div>
+
+  <div class="flex items-start gap-3">
+    <span class="text-yellow-600 text-xl">✦</span>
+    <p class="text-gray-700">
+      <strong>উদ্দেশ্য:</strong> সরকারি বিজ্ঞান কলেজের শিক্ষার্থীদের মাঝে ইসলামী আদর্শ,
+      নৈতিকতা ও সংস্কৃতি চর্চা করা এবং দ্বীনি চেতনা জাগ্রত করা।
+    </p>
+  </div>
+
+  <div class="flex items-start gap-3">
+    <span class="text-yellow-600 text-xl">✦</span>
+    <p class="text-gray-700">
+      <strong>কার্যক্রম:</strong> কুরআন অধ্যয়ন, ইসলামী আলোচনা, দাওয়াহ কার্যক্রম,
+      সামাজিক সেবা ও সাংস্কৃতিক প্রোগ্রাম আয়োজন।
+    </p>
+  </div>
+
+  <div class="flex items-start gap-3">
+    <span class="text-yellow-600 text-xl">✦</span>
+    <p class="text-gray-700">
+      <strong>সদস্যপদ:</strong> সরকারি বিজ্ঞান কলেজের সকল মুসলিম শিক্ষার্থী
+      এই ক্লাবের সদস্য হতে পারবে।
+    </p>
+  </div>
+
+  <div class="flex items-start gap-3">
+    <span class="text-yellow-600 text-xl">✦</span>
+    <p class="text-gray-700">
+      <strong>নিয়মনীতি:</strong> ক্লাবের সকল কার্যক্রম কলেজ প্রশাসনের নিয়মনীতি
+      ও ইসলামী শরীয়াহ অনুসারে পরিচালিত হবে।
+    </p>
+  </div>
+
+</div>
+       <div class="flex items-start gap-3"><span class="text-yellow-600 text-xl flex-shrink-0">✦</span>
+        <p class="text-gray-700"><strong>Mission:</strong> To promote Islamic values, knowledge, and brotherhood among students</p>
+       </div>
+       <div class="flex items-start gap-3"><span class="text-yellow-600 text-xl flex-shrink-0">✦</span>
+        <p class="text-gray-700"><strong>Vision:</strong> Building a generation of knowledgeable, practicing Muslims</p>
+       </div>
+       <div class="flex items-start gap-3"><span class="text-yellow-600 text-xl flex-shrink-0">✦</span>
+        <p class="text-gray-700"><strong>Values:</strong> Integrity, knowledge, compassion, unity, and service</p>
+       </div>
+       <div class="flex items-start gap-3"><span class="text-yellow-600 text-xl flex-shrink-0">✦</span>
+        <p class="text-gray-700"><strong>Membership:</strong> Open to all students of Govt. Science College</p>
+       </div>
+       <div class="flex items-start gap-3"><span class="text-yellow-600 text-xl flex-shrink-0">✦</span>
+        <p class="text-gray-700"><strong>Activities:</strong> Educational, cultural, and social welfare programs</p>
+       </div>
+      </div>
+     
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+     <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Get in Touch</h2>
+     <div class="section-divider"></div>
+     <div class="grid md:grid-cols-2 gap-12">
+      <div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+       <div class="space-y-4">
+        <div class="flex items-start gap-4">
+         <div class="text-2xl text-green-700">
+          📍
+         </div>
+         <div>
+          <h4 class="font-semibold text-gray-800">Address</h4>
+          <p class="text-gray-600 text-sm">Government Science College<br>
+           Tejgaon, Dhaka-1215</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="text-2xl text-green-700">
+          📧
+         </div>
+         <div>
+          <h4 class="font-semibold text-gray-800">Email</h4>
+          <p class="text-gray-600 text-sm">gscicc26@gmail.com</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="text-2xl text-green-700">
+          📱
+         </div>
+         <div>
+          <h4 class="font-semibold text-gray-800">Phone</h4>
+          <p class="text-gray-600 text-sm">+880 1932391139</p>
+         </div>
+        </div>
+        <div class="flex items-start gap-4">
+         <div class="text-2xl text-green-700">
+          🌐
+         </div>
+         <div>
+          <h4 class="font-semibold text-gray-800">Social Media</h4>
+          <div class="flex gap-3 mt-2"><a href="#" class="text-blue-600 hover:text-blue-700 text-xl" target="_blank" rel="noopener noreferrer">📘</a> <a href="#" class="text-pink-600 hover:text-pink-700 text-xl" target="_blank" rel="noopener noreferrer">📷</a> <a href="#" class="text-blue-400 hover:text-blue-500 text-xl" target="_blank" rel="noopener noreferrer">🐦</a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div>
+       <h3 class="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h3>
+       <form class="contact-form space-y-4" id="contact-form">
+        <div><input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div><input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div><textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+        </div><button type="submit" class="w-full bg-green-800 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300 shadow-md"> Send Message </button>
+       </form>
+       <div id="form-message" class="mt-4 text-center text-sm font-medium hidden"></div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="gradient-bg islamic-pattern py-12 text-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+     <div class="mb-6">
+      <h3 class="text-2xl font-bold text-yellow-400 mb-2">GSCICC</h3>
+      <p class="text-sm opacity-90">Govt. Science College Islamic Cultural Club</p>
+     </div>
+     <div class="border-t border-white border-opacity-20 pt-6">
+      <p class="text-sm">© 2024 GSCICC. All rights reserved.</p>
+      <p class="text-xs mt-2 opacity-75">Built with dedication for the Muslim community</p>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      club_name: "Govt. Science College Islamic Cultural Club",
+      club_tagline: "সরকারি বিজ্ঞান কলেজের একটি আদর্শভিত্তিক ইসলামিক ছাত্র সংগঠন",
+      motto: "Knowledge · Faith · Culture",
+      about_title: "About GSCICC",
+      about_description: "Govt. Science College Islamic Cultural Club (GSCICC) একটি বহুমুখী ইসলামিক ছাত্র সংগঠন। আমাদের লক্ষ্য হলো শিক্ষার্থীদের মাঝে দ্বীনি চেতনা, নৈতিকতা ও নেতৃত্বের গুণাবলি গড়ে তোলা।"
+    };
+
+    async function onConfigChange(config) {
+      const clubNameEl = document.getElementById('club-name');
+      const clubTaglineEl = document.getElementById('club-tagline');
+      const mottoEl = document.getElementById('motto');
+      const aboutTitleEl = document.getElementById('about-title');
+      const aboutDescEl = document.getElementById('about-description');
+
+      if (clubNameEl) clubNameEl.textContent = config.club_name || defaultConfig.club_name;
+      if (clubTaglineEl) clubTaglineEl.textContent = config.club_tagline || defaultConfig.club_tagline;
+      if (mottoEl) mottoEl.textContent = config.motto || defaultConfig.motto;
+      if (aboutTitleEl) aboutTitleEl.textContent = config.about_title || defaultConfig.about_title;
+      if (aboutDescEl) {
+        const strong = aboutDescEl.querySelector('strong');
+        if (strong) {
+          aboutDescEl.innerHTML = '';
+          const strongEl = document.createElement('strong');
+          strongEl.className = 'text-green-800';
+          strongEl.textContent = 'Govt. Science College Islamic Cultural Club (GSCICC)';
+          aboutDescEl.appendChild(strongEl);
+          aboutDescEl.appendChild(document.createTextNode(' ' + (config.about_description || defaultConfig.about_description).replace('Govt. Science College Islamic Cultural Club (GSCICC) ', '')));
+        } else {
+          aboutDescEl.textContent = config.about_description || defaultConfig.about_description;
+        }
+      }
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["club_name", config.club_name || defaultConfig.club_name],
+        ["club_tagline", config.club_tagline || defaultConfig.club_tagline],
+        ["motto", config.motto || defaultConfig.motto],
+        ["about_title", config.about_title || defaultConfig.about_title],
+        ["about_description", config.about_description || defaultConfig.about_description]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    // Contact form handling
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const messageEl = document.getElementById('form-message');
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+      
+      messageEl.textContent = 'Thank you for your message! We will get back to you soon.';
+      messageEl.className = 'mt-4 text-center text-sm font-medium text-green-700 bg-green-50 p-3 rounded-lg';
+      messageEl.classList.remove('hidden');
+      
+      nameInput.value = '';
+      emailInput.value = '';
+      messageInput.value = '';
+      
+      setTimeout(() => {
+        messageEl.classList.add('hidden');
+      }, 5000);
+    });
+
+    // Smooth scroll enhancement
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b9b8fce858d5853',t:'MTc2NzcwNjE0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
