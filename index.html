@@ -704,10 +704,9 @@
         <p class="text-sm opacity-50">&copy; 2024 GSCICC | Developed by <span class="text-yellow-400">MD Samin Ismail</span></p>
     </div>
 </footer>
-<button id="backToTop" class="fixed bottom-8 right-8 bg-yellow-400 text-green-900 w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl font-bold border-2 border-green-800 transition-all duration-300 z-[100] opacity-0 invisible hover:bg-white hover:scale-110">
+<button id="backToTop" class="fixed bottom-8 right-8 bg-yellow-400 text-green-900 w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-2xl font-bold border-2 border-green-800 transition-all duration-300 z-[999] opacity-0 invisible hover:bg-white hover:scale-110">
     ↑
 </button>
-
   </div>
   <script>
     const defaultConfig = {
@@ -811,26 +810,31 @@
     });
   </script>
         <script>
+    // আপনার সাইটের মেইন কন্টেইনার যেখানে স্ক্রল হচ্ছে
+    const scrollContainer = document.querySelector('.overflow-auto');
     const backToTopButton = document.getElementById("backToTop");
 
-    // যখন ইউজার ২০০ পিক্সেল নিচে নামবে, তখন বাটনটি দেখা যাবে
-    window.onscroll = function() {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-            backToTopButton.style.opacity = "1";
-            backToTopButton.style.visibility = "visible";
-        } else {
-            backToTopButton.style.opacity = "0";
-            backToTopButton.style.visibility = "hidden";
-        }
-    };
+    if (scrollContainer) {
+        scrollContainer.onscroll = function() {
+            // যদি ২০০ পিক্সেলের বেশি নিচে স্ক্রল করা হয়
+            if (scrollContainer.scrollTop > 200) {
+                backToTopButton.style.opacity = "1";
+                backToTopButton.style.visibility = "visible";
+            } else {
+                backToTopButton.style.opacity = "0";
+                backToTopButton.style.visibility = "hidden";
+            }
+        };
 
-    // বাটনে ক্লিক করলে এক সেকেন্ডের মধ্যে স্মুথলি উপরে চলে যাবে
-    backToTopButton.onclick = function() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    };
+        // বাটনে ক্লিক করলে উপরে যাওয়ার ফাংশন
+        backToTopButton.onclick = function() {
+            scrollContainer.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    }
 </script>
+
  </body>
 </html>
